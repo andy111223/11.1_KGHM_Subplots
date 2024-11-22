@@ -42,23 +42,42 @@ This project requires the following dependencies:
 - **pandas**: 1.3.5
 - **plotly**: 4.14.3
 
-### Install Dependencies
-To install the dependencies, use the following command:
-```bash
-pip install cufflinks==0.17.3 numpy==1.21.6 pandas==1.3.5 plotly==4.14.3
-```
+### How to open
 
-### Verify Installed Dependencies
-To verify the installed dependencies, use the command below:
-```bash
-pip list | grep -E "numpy|pandas|plotly|cufflinks"
-```
+Follows these steps:
 
-## Cloning the Repository
-To clone this project repository, run the following command:
-```bash
-git clone https://github.com/andy111223/11.1_KGHM_Subplots.git
-```
+1. **Clone the Repository:**
+   ```
+   git clone https://github.com/andy111223/11.1_KGHM_Subplots.git
+   cd 11.1_KGHM_Subplots
+   ```
+
+2. **Create and activate the virtual environment (if not already created):**
+   ```
+   python3.10 -m venv new_env_py310
+   source new_env_py310/bin/activate
+   ```
+
+3. **Install the required dependencies:**
+   ```
+   pip install cufflinks==0.17.3 numpy==1.21.6 pandas==1.3.5 plotly==4.14.3
+   ```
+
+4. **Verify Installed Dependencies**
+    ```bash
+    pip list | grep -E "numpy|pandas|plotly|cufflinks"
+    ```
+
+5. **Link the kernel to Jupyter Notebook:**
+   ```
+   python -m ipykernel install --user --name=new_env_py310 --display-name "Python (new_env_py310)"
+   ```
+
+6. **Open the notebook and select the correct kernel in VS Code:**
+   - Open the notebook in VS Code.
+   - Click on the kernel selector (top-right) and choose "Python (new_env_py310)".
+
+
 
 ## Usage
 The project includes a Jupyter Notebook (`kghm.ipynb`) that walks through the entire analysis process. It visualizes KGHM and Copper closing prices and combines them into a comprehensive dashboard to show comparative insights.
